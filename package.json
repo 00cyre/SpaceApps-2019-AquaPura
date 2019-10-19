@@ -1,0 +1,23 @@
+{
+  "name": "spaceapps-2019-aquapura",
+  "version": "1.0.0",
+  "description": "Repository for the arduino code on the project AquaPura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adsvunu/SpaceApps-2019-AquaPura-Arduino.git"
+  },
+  "author": "xyaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adsvunu/SpaceApps-2019-AquaPura-Arduino/issues"
+  },
+  "homepage": "https://github.com/adsvunu/SpaceApps-2019-AquaPura-Arduino#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
