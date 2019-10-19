@@ -76,13 +76,13 @@
                                 <i class="mdc-select__dropdown-icon"></i>
                                 <select id='select_opt' class="mdc-select__native-control">
                                     <option value="" disabled selected></option>
-                                    <option value="grains">
+                                    <option value="1">
                                         Discrepancia visual
                                     </option>
-                                    <option value="vegetables">
+                                    <option value="2">
                                         Mal Cheiro
                                     </option>
-                                    <option value="fruit">
+                                    <option value="3">
                                         Dejetos na água
                                     </option>
                                 </select>
@@ -101,9 +101,26 @@
                         </div>
                     </div>
                     <script>
+                        var coords;
+                        function getLocation() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showPosition);
+                            } else {
+                                x.innerHTML = "Geolocation is not supported by this browser.";
+                            }
+                        }
+
+                        function showPosition(position) {
+                            coords = position.coords;
+                        }
+                        document.getElementById('loc').addEventListener('click',function(){
+                            getLocation();
+                        });
                         document.getElementById('enviar').addEventListener('click', function (e) {
-                            e.parentNode.parentElement.children[1].children[0].children.select_opt.selectedOptions
-                            console.log(e);
+                            var cpt = document.getElementById('cpf_txt').value;
+                            var selector = document.getElementById('select_opt').value;
+
+                            console.log(selector, cpt, coords);
                         })
                     </script>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
